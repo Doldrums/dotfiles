@@ -4,13 +4,12 @@
 
 a macOS development environment
 
+<img src="screenshot.png" alt="neovim with claude code" width="400">
+<img src="screenshot1.png" alt="starship prompt in ghostty" width="400">
+
+`ghostty` · `zsh` · `starship` · `neovim` · `claude code`
+
 </div>
-
-<br>
-
-```
-ghostty   ·   zsh   ·   starship   ·   neovim   ·   claude code
-```
 
 <br>
 
