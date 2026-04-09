@@ -1,6 +1,5 @@
 .DS_Store
 *.backup
 *.swp
-screenshot.png
 .claude/
 CLAUDE.md
