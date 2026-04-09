@@ -1,0 +1,144 @@
+# ─── Format ──────────────────────────────────────────
+format = """
+[](#323437)\
+$username\
+[](bg:#3b4252 fg:#323437)\
+$env_var\
+[](bg:#434c5e fg:#3b4252)\
+$directory\
+[](bg:#4c566a fg:#434c5e)\
+$git_branch\
+$git_status\
+[](fg:#4c566a)\
+$fill\
+$python\
+$nodejs\
+$rust\
+$golang\
+$package\
+$cmd_duration\
+$jobs\
+$time\
+$line_break\
+$status\
+$character"""
+
+add_newline = true
+palette = "moonfly"
+
+[palettes.moonfly]
+bg1 = "#323437"
+bg2 = "#3b4252"
+bg3 = "#434c5e"
+bg4 = "#4c566a"
+fg = "#bdbdbd"
+red = "#ff5454"
+pink = "#ff5189"
+green = "#8cc85f"
+yellow = "#e3c78a"
+blue = "#80a0ff"
+purple = "#cf87e8"
+cyan = "#79dac8"
+orange = "#c2c292"
+
+# ─── Left Prompt ─────────────────────────────────────
+
+[username]
+show_always = true
+style_user = "bg:bg1 fg:blue bold"
+style_root = "bg:bg1 fg:red bold"
+format = "[ $user ]($style)"
+
+[env_var.CURRENT_IP]
+style = "bg:bg2 fg:cyan"
+format = "[  $env_value ]($style)"
+default = "no-ip"
+
+[directory]
+style = "bg:bg3 fg:green bold"
+format = "[  $path ]($style)"
+truncation_length = 4
+truncation_symbol = "…/"
+read_only = " "
+read_only_style = "bg:bg3 fg:red"
+
+[git_branch]
+symbol = ""
+style = "bg:bg4 fg:purple bold"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:bg4 fg:red"
+format = '[($all_status$ahead_behind )]($style)'
+conflicted = "= "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕ "
+up_to_date = ""
+untracked = "?${count} "
+stashed = "* "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "x${count} "
+
+# ─── Right Prompt (filled to the right) ──────────────
+
+[fill]
+symbol = " "
+
+[python]
+symbol = "py"
+style = "fg:yellow"
+format = '[ $symbol $version ($virtualenv) ]($style)'
+
+[nodejs]
+symbol = "node"
+style = "fg:green"
+format = '[ $symbol $version ]($style)'
+
+[rust]
+symbol = "rs"
+style = "fg:red"
+format = '[ $symbol $version ]($style)'
+
+[golang]
+symbol = "go"
+style = "fg:cyan"
+format = '[ $symbol $version ]($style)'
+
+[package]
+symbol = "pkg"
+style = "fg:orange"
+format = '[ $symbol $version ]($style)'
+disabled = false
+
+[cmd_duration]
+min_time = 2000
+style = "fg:orange bold"
+format = '[  $duration ]($style)'
+
+[jobs]
+symbol = "+ "
+style = "fg:blue bold"
+number_threshold = 1
+format = "[$symbol$number]($style) "
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:fg"
+format = '[ $time ]($style)'
+
+# ─── Bottom Line ─────────────────────────────────────
+
+[status]
+disabled = false
+symbol = "✘ "
+success_symbol = ""
+format = '[$symbol$status ](bold red)'
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"
