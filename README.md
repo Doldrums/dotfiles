@@ -1,11 +1,88 @@
-<p align="center">
-  <img src="screenshot.png" alt="screenshot" width="720">
-  <br><br>
-  <code>ghostty</code> · <code>zsh</code> · <code>starship</code> · <code>neovim</code> · <code>claude code</code>
-</p>
+<div align="center">
+
+# ⋆ dotfiles ⋆
+
+a macOS development environment
+
+</div>
+
+<br>
 
 ```
-git clone https://github.com/amoriodi/dotfiles.git ~/dotfiles && cd ~/dotfiles && ./install.sh
+ghostty   ·   zsh   ·   starship   ·   neovim   ·   claude code
 ```
 
-<sub>idempotent — safe to re-run · MIT</sub>
+<br>
+
+<table>
+<tr>
+<td valign="top" width="33%">
+
+###### shell
+
+starship prompt
+live ip · git · runtime · clock
+
+zoxide smart cd
+autosuggestions
+syntax highlighting
+
+eza · bat · fd · ripgrep
+
+</td>
+<td valign="top" width="33%">
+
+###### neovim
+
+kickstart.nvim
+lsp · treesitter · telescope
+
+lualine · nvim-navic
+neo-tree
+
+claude code sidebar
+
+noice · notify · alpha
+
+</td>
+<td valign="top" width="33%">
+
+###### ghostty
+
+moonfly theme
+liga sfmono nerd font
+
+translucent with blur
+
+custom splits & tabs
+quick terminal
+
+</td>
+</tr>
+</table>
+
+<br>
+
+###### install
+
+```bash
+git clone https://github.com/Doldrums/dotfiles.git ~/dotfiles
+cd ~/dotfiles && ./install.sh
+```
+
+###### structure
+
+```
+zsh/        shell config
+starship/   prompt
+ghostty/    terminal + moonfly theme
+nvim/       kickstart custom plugins
+```
+
+<br>
+
+<div align="center">
+
+⋆
+
+</div>
